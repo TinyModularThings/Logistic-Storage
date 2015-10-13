@@ -1,6 +1,6 @@
-package advancedLogistics.src.common.core;
+package logisticStorage.src.common.core;
 
-public class ALLib {
+public class LSLib {
 	
 	//Reference Lib for all constances which are used to often to repeat^^" 
 	

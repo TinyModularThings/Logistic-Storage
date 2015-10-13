@@ -1,9 +1,9 @@
-package advancedLogistics.src.common.core;
+package logisticStorage.src.common.core;
 
 import net.minecraft.server.MinecraftServer;
 import cpw.mods.fml.common.FMLCommonHandler;
 
-public class AdvancedCore {
+public class LogisticCore {
 
 	public boolean isServer()
 	{

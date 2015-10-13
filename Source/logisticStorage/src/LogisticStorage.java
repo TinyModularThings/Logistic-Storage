@@ -1,11 +1,7 @@
-package advancedLogistics.src;
+package logisticStorage.src;
 
-import static advancedLogistics.src.common.core.ALLib.clientCore;
-import static advancedLogistics.src.common.core.ALLib.modID;
-import static advancedLogistics.src.common.core.ALLib.name;
-import static advancedLogistics.src.common.core.ALLib.serverCore;
-import static advancedLogistics.src.common.core.ALLib.version;
-import advancedLogistics.src.common.core.AdvancedCore;
+import logisticStorage.src.common.core.LogisticCore;
+import static logisticStorage.src.common.core.LSLib.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -17,16 +13,16 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
 
 @Mod(modid = modID, name = name, version = version)
-public class AdvancedLogistics 
+public class LogisticStorage
 {
 	
 	//Mod Access. FML AutoInserts that
 	@Instance(modID)
-	public static AdvancedLogistics instance;
+	public static LogisticStorage instance;
 
 	//Mod Core. (Also AutoInserted) and also AutoDetects Server and client
 	@SidedProxy(serverSide = serverCore, clientSide = clientCore)
-	public static AdvancedCore core;
+	public static LogisticCore core;
 	
 	
 	//First Call
