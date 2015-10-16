@@ -19,6 +19,11 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * 
+ * @author Speiger
+ *
+ */
 public class TextureStorage
 {
 	private static TextureStorage storage;

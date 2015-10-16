@@ -14,6 +14,12 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/**
+ * 
+ * @author Speiger
+ *
+ * @param <T> Type of the Textures you want to store..
+ */
 public class TextureStoragePart<T>
 {
 	int textureType;
