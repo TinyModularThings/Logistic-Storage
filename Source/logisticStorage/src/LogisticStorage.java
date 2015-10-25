@@ -5,6 +5,10 @@ import static logisticStorage.src.common.core.LSLib.modID;
 import static logisticStorage.src.common.core.LSLib.name;
 import static logisticStorage.src.common.core.LSLib.serverCore;
 import static logisticStorage.src.common.core.LSLib.version;
+
+import java.io.File;
+
+import logisticStorage.src.common.config.LSConfig;
 import logisticStorage.src.common.core.LogisticCore;
 import logisticStorage.src.common.network.NetworkCore;
 import logisticStorage.src.common.network.handler.PacketManager;
@@ -17,6 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.event.FMLServerStoppingEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = modID, name = name, version = version)
 public class LogisticStorage
@@ -36,8 +41,8 @@ public class LogisticStorage
 	public void onPreInit(FMLPreInitializationEvent event)
 	{	
 		//Config init
-		//Block/Item/Fluid/TileEntity(Class) Init
-		//GuiHandler Load
+		LSConfig.loadConfig(new File(event.getModConfigurationDirectory().getAbsolutePath()+"/LogisticStorage/Common.cfg"));
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, core.get());
 		PacketManager.instance.init();
 	}
 	
